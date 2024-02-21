@@ -7,7 +7,7 @@ import Product from './Product';
 
 const productlist = [
   {
-    img: prod1,  // Remove the curly braces around prod1, prod2, etc.
+    img: prod1,  //to use vardiable no need to use{}
     name: 'THE NEW 2024 BMW X5',
   },
   {
