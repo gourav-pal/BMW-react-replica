@@ -28,8 +28,9 @@ const ProductCard = () => {
   return (
     <div className='product-card'>
       {
-        productlist.map((product, idx) => <Product key={idx} img={product.img} name={product.name} />)
-        // Pass the individual product details to the Product component
+        productlist.map((product, idx) => <Product
+        img={product.img} 
+        name={product.name} />)
       }
     </div>
   );
