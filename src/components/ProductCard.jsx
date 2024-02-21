@@ -5,27 +5,31 @@ import prod3 from '../assets/car3.avif'
 import prod4 from '../assets/car4.avif'
 import Product from './Product'
 
+const productlist=[
+  {
+    img:{prod1},
+    name:'THE NEW 2024 BMW X5',
+  },
+  {
+    img:{prod2},
+    name:'THE NEW 2024 BMW X5',
+  },
+  {
+    img:{prod3},
+    name:'THE NEW 2024 BMW X5',
+  },
+  {
+    img:{prod4},
+    name:'THE NEW 2024 BMW X5',
+  }
+]
+
 const ProductCard = () => {
   return (
-
     <div className='product-card'>
-         <Product 
-         img={prod2}
-         name='THE NEW 2024 BMW X5'
-         /> 
-         <Product 
-         img={prod3}
-         name='THE 2024 BMW iX
-         '
-         />  
-         <Product 
-         img={prod1}
-         name='THE 2024 BMW X7'
-         />   
-         <Product 
-        img={prod4}
-        name='THE 2024 BMW 8 SERIES'
-        />
+      {
+        productlist.map((product,idx)=> <ProductCard/>)
+      }
     </div>
     
   )
