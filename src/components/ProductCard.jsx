@@ -1,38 +1,38 @@
-import React from 'react'
-import prod1 from '../assets/car1.avif'
-import prod2 from '../assets/car2.avif'
-import prod3 from '../assets/car3.avif'
-import prod4 from '../assets/car4.avif'
-import Product from './Product'
+import React from 'react';
+import prod1 from '../assets/car1.avif';
+import prod2 from '../assets/car2.avif';
+import prod3 from '../assets/car3.avif';
+import prod4 from '../assets/car4.avif';
+import Product from './Product';
 
-const productlist=[
+const productlist = [
   {
-    img:{prod1},
-    name:'THE NEW 2024 BMW X5',
+    img: prod1,  // Remove the curly braces around prod1, prod2, etc.
+    name: 'THE NEW 2024 BMW X5',
   },
   {
-    img:{prod2},
-    name:'THE NEW 2024 BMW X5',
+    img: prod2,
+    name: 'THE NEW 2024 BMW X5',
   },
   {
-    img:{prod3},
-    name:'THE NEW 2024 BMW X5',
+    img: prod3,
+    name: 'THE NEW 2024 BMW X5',
   },
   {
-    img:{prod4},
-    name:'THE NEW 2024 BMW X5',
-  }
-]
+    img: prod4,
+    name: 'THE NEW 2024 BMW X5',
+  },
+];
 
 const ProductCard = () => {
   return (
     <div className='product-card'>
       {
-        productlist.map((product,idx)=> <ProductCard/>)
+        productlist.map((product, idx) => <Product key={idx} img={product.img} name={product.name} />)
+        // Pass the individual product details to the Product component
       }
     </div>
-    
-  )
-}
+  );
+};
 
-export default ProductCard
+export default ProductCard;
